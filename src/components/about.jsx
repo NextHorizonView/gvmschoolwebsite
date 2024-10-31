@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Navbar from './NavBar';
+import NavBar from './navbar';
 
 export default function About() {
   const backgroundImageUrl = 'https://res.cloudinary.com/diowslfww/image/upload/v1730351465/xn7wfirab3w7mhm8c3fv.png';
@@ -23,7 +23,7 @@ export default function About() {
         />
       </div>
 
-      <Navbar />
+      <NavBar />
 
       <motion.div
         className="relative z-10 min-h-screen flex flex-col justify-end px-4 sm:px-8 md:px-12 pb-8 sm:pb-12 md:pb-16 lg:pb-32"

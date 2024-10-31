@@ -1,12 +1,12 @@
 import Carousel from "@/components/Carousel";
-import Navbar from "@/components/NavBar";
+import NavBar from "@/components/navbar";
 import HomeSection from "@/components/HomeSection";
 // import EducationalSection from "@/components/EducationalSection";
 
 export default function Home() {
   return (
     <div className="relative">
-      <Navbar />
+      <NavBar />
       <Carousel />
       <HomeSection/>
       {/* <EducationalSection/> */}
