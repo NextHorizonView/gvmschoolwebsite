@@ -18,16 +18,13 @@ export default function NavBar() {
         >
             <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-2 md:space-x-4">
-                    <div className="relative w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20">
+                    <div className="relative">
                         <Image
                             src={logoUrl}
                             alt="School Logo"
-                            fill
+                            width={80}  // Explicit width
+                            height={80} // Explicit height
                             className="object-contain"
-                            sizes="(max-width: 640px) 2.5rem, 
-                     (max-width: 768px) 3.5rem,
-                     (max-width: 1024px) 4rem,
-                     5rem"
                             priority
                         />
                     </div>
