@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import NavBar from './navbar';
+import NavBar from './NavigationMenu';
 
 export default function About() {
   const backgroundImageUrl = 'https://res.cloudinary.com/diowslfww/image/upload/v1730351465/xn7wfirab3w7mhm8c3fv.png';

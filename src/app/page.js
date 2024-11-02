@@ -1,5 +1,5 @@
 import Carousel from "@/components/Carousel";
-import NavBar from "@/components/navbar";
+import NavBar from "@/components/NavigationMenu";
 import HomeSection from "@/components/HomeSection";
 // import EducationalSection from "@/components/EducationalSection";
 
