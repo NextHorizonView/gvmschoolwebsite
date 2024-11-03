@@ -1,3 +1,4 @@
+// AboutUsSection.jsx
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -6,19 +7,26 @@ import { BookOpen, Palette, Trophy, User } from 'lucide-react';
 export default function AboutUsSection() {
   const aboutUsImageUrl = 'https://res.cloudinary.com/diowslfww/image/upload/v1730548984/mbfasiufmgutamgbixxv.png';
 
-  const textVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-  };
-
+  // Variants for staggered, "unlock" animation
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.5, staggerChildren: 0.3 } }
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3, // Delay each child element's animation
+        delayChildren: 0.5,   // Start after 0.5s
+      },
+    },
+  };
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 20, scale: 0.95 },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+    hidden: { opacity: 0, y: 20, scale: 0.9 },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.7, ease: "easeOut" } },
   };
 
   const cards = [
@@ -55,9 +63,10 @@ export default function AboutUsSection() {
   return (
     <motion.section
       className="relative w-full min-h-screen py-16 md:py-24"
-      variants={containerVariants}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.2 }} // Re-trigger animation on scroll
+      variants={containerVariants}
     >
       {/* Full-width Background Image */}
       <div className="absolute inset-0 w-full h-full">
@@ -72,8 +81,8 @@ export default function AboutUsSection() {
       <div className="relative max-w-7xl mx-auto px-4 md:px-8">
         {/* About Our School Heading */}
         <motion.h2
-          variants={textVariants}
           className="unica-one-regular text-4xl md:text-5xl lg:text-6xl text-[#18413F] text-center mb-16"
+          variants={textVariants}
         >
           About Our School
         </motion.h2>
