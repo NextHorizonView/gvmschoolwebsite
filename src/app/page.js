@@ -1,4 +1,5 @@
 
+import Footer from "@/components/Footer";
 import HomePage from "@/components/HomePages/HomePage";
 import NavBar from "@/components/NavigationMenu";
 
@@ -9,6 +10,7 @@ export default function Home() {
     <div className="relative">
       <NavBar />
       <HomePage/>
+      <Footer/>
       {/* <EducationalSection/> */}
     </div>
   );

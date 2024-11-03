@@ -14,19 +14,19 @@ export default function AboutUsSection() {
       opacity: 1,
       transition: {
         staggerChildren: 0.3, // Delay each child element's animation
-        delayChildren: 0.5,   // Start after 0.5s
+        delayChildren: 0.2,   // Start after 0.5s
       },
     },
   };
 
   const textVariants = {
     hidden: { opacity: 0, y: 20, scale: 0.95 },
-    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
   };
 
   const cardVariants = {
     hidden: { opacity: 0, y: 20, scale: 0.9 },
-    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.7, ease: "easeOut" } },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
   };
 
   const cards = [

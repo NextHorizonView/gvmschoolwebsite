@@ -9,6 +9,8 @@ import MeetPrincipalSection from '@/components/HomePages/MeetPrincipalSection';
 import ConnectWithUsSection from './ContactUs';
 import ThrivingCommunity from './ThrivingCommunity';
 import UnlockingTheFuture from './UnlockingTheFuture';
+import EducationSection from './EducationSection';
+import CommunitySection from './Community';
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -139,6 +141,8 @@ export default function HomePage() {
       <ConnectWithUsSection />
       <ThrivingCommunity/>
       <UnlockingTheFuture/>
+      <EducationSection/>
+      <CommunitySection/>
     </div>
   );
 }
