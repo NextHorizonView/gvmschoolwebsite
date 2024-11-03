@@ -1,9 +1,11 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import NavBar from './NavigationMenu';
-import AboutUsSection from './AboutUsSection';
-import WelcomeSection from './WelcomeSection';
+import NavBar from '../NavigationMenu';
+import AboutUsSection from '@/components/HomePages/AboutUsSection'
+import WelcomeSection from '@/components/HomePages/WelcomeSection';
+import MeetPrincipalSection from '@/components/HomePages/MeetPrincipalSection';
+import ConnectWithUsSection from './ContactUs';
 
 export default function HomePage() {
   const generalBackgroundImageUrl = 'https://res.cloudinary.com/diowslfww/image/upload/v1730351465/xn7wfirab3w7mhm8c3fv.png';
@@ -65,6 +67,8 @@ export default function HomePage() {
       {/* About Us Section */}
       <AboutUsSection /> {/* Render the AboutUs component */}
       <WelcomeSection />
+      <MeetPrincipalSection/>
+      <ConnectWithUsSection/>
     </div>
   );
 }
