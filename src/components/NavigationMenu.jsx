@@ -11,45 +11,47 @@ export default function NavBar() {
 
     return (
         <motion.nav
-            className="absolute top-0 w-full z-50 px-4 sm:px-6 md:px-8 py-4 md:py-6"
+            className="absolute top-0 w-full h-[143px] z-50 px-4 sm:px-6 md:px-8"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <div className="flex justify-between items-center">
-                <div className="flex items-center space-x-2 md:space-x-4">
-                    <div className="relative">
+            <div className="flex justify-between items-center h-full">
+                {/* Logo and School Name Container */}
+                <div className="flex items-center gap-3">
+                    <div className="relative w-[60px] h-[60px]">
                         <Image
                             src={logoUrl}
                             alt="School Logo"
-                            width={80}  // Explicit width
-                            height={80} // Explicit height
+                            width={60}
+                            height={60}
                             className="object-contain"
                             priority
                         />
                     </div>
-                    <div className="flex flex-col text-white">
-                        <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold leading-tight">Gyanodaya</h1>
-                        <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold leading-tight">Vidya Mandir</h2>
-                        <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold leading-tight">High School</h3>
+                    <div className="flex flex-col text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                        <h1 className="text-3xl font-bold opacity-80">Gyanodaya</h1>
+                        <h2 className="text-3xl font-bold opacity-80">Vidya Mandir</h2>
+                        <h3 className="text-3xl font-bold opacity-80">High School</h3>
                     </div>
                 </div>
 
-                <div className="hidden md:flex items-center space-x-6">
-                    <nav className="flex space-x-6 items-center text-white">
-                        <Link href="/" className="hover:text-gray-300 transition-colors text-sm lg:text-base">Home</Link>
-                        <Link href="/menu" className="hover:text-gray-300 transition-colors text-sm lg:text-base">Menu</Link>
-                        <Link href="/about" className="hover:text-gray-300 transition-colors text-sm lg:text-base">About us</Link>
-                        <Link href="/contact" className="hover:text-gray-300 transition-colors text-sm lg:text-base">Contact</Link>
-                        <div className="bg-black rounded-full px-3 py-1 lg:px-4 lg:py-1">
-                            <Link href="/faq" className="hover:text-gray-300 transition-colors text-sm lg:text-base">FAQ</Link>
+                {/* Navigation Links */}
+                <div className="hidden md:flex items-center gap-8">
+                    <nav className="flex gap-8 items-center text-white text-lg" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                        <Link href="/" className="hover:text-gray-300 transition-colors">Home</Link>
+                        <Link href="/admissions" className="hover:text-gray-300 transition-colors">Admissions</Link>
+                        <Link href="/team" className="hover:text-gray-300 transition-colors">Team</Link>
+                        <Link href="/contact" className="hover:text-gray-300 transition-colors">Contact</Link>
+                        <div className="bg-black/20 backdrop-blur-sm rounded-full px-6 py-2">
+                            <Link href="/faq" className="hover:text-gray-300 transition-colors">FAQ</Link>
                         </div>
                     </nav>
 
-                    <div className="w-7 h-7 lg:w-8 lg:h-8 bg-white rounded-full flex items-center justify-center cursor-pointer">
+                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-4 w-4 lg:h-5 lg:w-5 text-black"
+                            className="h-6 w-6 text-black"
                             viewBox="0 0 20 20"
                             fill="currentColor"
                         >
@@ -62,25 +64,27 @@ export default function NavBar() {
                     </div>
                 </div>
 
+                {/* Mobile Menu Button */}
                 <button
                     className="md:hidden text-white p-2"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
-                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
             </div>
 
+            {/* Mobile Menu */}
             {isMenuOpen && (
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
-                    className="absolute top-full left-0 right-0 bg-black bg-opacity-90 mt-2 py-4 px-4 md:hidden"
+                    className="absolute top-full left-0 right-0 bg-black/90 backdrop-blur-sm mt-2 py-6 px-4 md:hidden"
                 >
-                    <nav className="flex flex-col space-y-4 text-white">
+                    <nav className="flex flex-col space-y-6 text-white text-lg" style={{ fontFamily: 'Poppins, sans-serif' }}>
                         <Link href="/" className="hover:text-gray-300 transition-colors">Home</Link>
-                        <Link href="/menu" className="hover:text-gray-300 transition-colors">Menu</Link>
-                        <Link href="/about" className="hover:text-gray-300 transition-colors">About us</Link>
+                        <Link href="/admissions" className="hover:text-gray-300 transition-colors">Admissions</Link>
+                        <Link href="/team" className="hover:text-gray-300 transition-colors">Team</Link>
                         <Link href="/contact" className="hover:text-gray-300 transition-colors">Contact</Link>
                         <Link href="/faq" className="hover:text-gray-300 transition-colors">FAQ</Link>
                     </nav>
