@@ -1,16 +1,10 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
+import { BookOpen, Palette, Trophy, User } from 'lucide-react';
 
 export default function AboutUsSection() {
   const aboutUsImageUrl = 'https://res.cloudinary.com/diowslfww/image/upload/v1730548984/mbfasiufmgutamgbixxv.png';
-
-  const images = {
-    academics: 'https://res.cloudinary.com/diowslfww/image/upload/v1730549476/academics_icon.png',
-    cultural: 'https://res.cloudinary.com/diowslfww/image/upload/v1730549476/utkqv5epz2veybwniv5v.png',
-    sports: 'https://res.cloudinary.com/diowslfww/image/upload/v1730549476/va2xlwiznk8shhiijjjg.png',
-    faculty: 'https://res.cloudinary.com/diowslfww/image/upload/v1730549476/nfrpb8ehai0mvsvmxecu.png'
-  };
 
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -29,96 +23,91 @@ export default function AboutUsSection() {
 
   const cards = [
     {
-      icon: images.academics,
+      icon: <BookOpen className="w-12 h-12 text-[#18413F]" />,
       title: "Academic Excellence",
-      description: "Discover our rich history and tradition of academic excellence",
+      description: "Discover our rich history and tradition of academic excellence.",
       buttonText: "Admissions",
-      bgColor: "bg-[#19413F]",
-      textColor: "text-white",
-      buttonBg: "bg-[#E2C1A5]"
+      bgColor: "bg-[#E2C1A5]"
     },
     {
-      icon: images.cultural,
+      icon: <Palette className="w-12 h-12 text-white" />,
       title: "Cultural Activities",
-      description: "Immerse yourself in a vibrant tapestry of cultural events",
+      description: "Immerse yourself in a vibrant tapestry of cultural events.",
       buttonText: "Learn More",
-      bgColor: "bg-[#E2C1A5]",
-      textColor: "text-[#19413F]",
-      buttonBg: "bg-[#19413F]"
+      bgColor: "bg-[#18413F]"
     },
     {
-      icon: images.sports,
+      icon: <Trophy className="w-12 h-12 text-white" />,
       title: "Sports and Athletics",
-      description: "Unleash your competitive spirit through our athletic programs",
+      description: "Unleash your competitive spirit through our athletic programs.",
       buttonText: "Join a Team",
-      bgColor: "bg-[#19413F]",
-      textColor: "text-white",
-      buttonBg: "bg-[#E2C1A5]"
+      bgColor: "bg-[#19413F]"
     },
     {
-      icon: images.faculty,
+      icon: <User className="w-12 h-12 text-[#18413F]" />,
       title: "Faculty and Staff",
-      description: "Meet our dedicated educators and administrators",
+      description: "Meet our dedicated educators and administrators.",
       buttonText: "Know Us",
-      bgColor: "bg-[#E2C1A5]",
-      textColor: "text-[#19413F]",
-      buttonBg: "bg-[#19413F]"
+      bgColor: "bg-[#E2C1A5]"
     }
   ];
 
   return (
-    <div className="relative w-full min-h-screen">
+    <motion.section
+      className="relative w-full min-h-screen py-16 md:py-24"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       {/* Full-width Background Image */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
+      <div className="absolute inset-0 w-full h-full">
         <img
           src={aboutUsImageUrl}
           alt="School Background"
           className="w-full h-full object-cover"
-          style={{ minHeight: '100vh' }}
         />
       </div>
 
       {/* Content Container */}
-      <motion.div
-        className="relative h-full flex flex-col justify-center px-4 py-12 overflow-y-auto"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <div className="max-w-7xl mx-auto w-full">
-          {/* About Our School Heading */}
-          <motion.h1
-            variants={textVariants}
-            className="unica-one-regular text-4xl md:text-6xl lg:text-8xl text-[#18413F] mb-16 text-center"
-          >
-            About Our School
-          </motion.h1>
+      <div className="relative max-w-7xl mx-auto px-4 md:px-8">
+        {/* About Our School Heading */}
+        <motion.h2
+          variants={textVariants}
+          className="unica-one-regular text-4xl md:text-5xl lg:text-6xl text-[#18413F] text-center mb-16"
+        >
+          About Our School
+        </motion.h2>
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {cards.map((card, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                className={`${card.bgColor} p-8 rounded-sm flex flex-col items-center text-center min-h-[350px]`}
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {cards.map((card, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              className={`${card.bgColor} rounded-sm p-8 flex flex-col items-center text-center min-h-[350px]`}
+            >
+              <div className="mb-6">
+                {card.icon}
+              </div>
+              <h3 className={`text-xl font-bold mb-4 ${card.bgColor === 'bg-[#E2C1A5]' ? 'text-[#18413F]' : 'text-white'}`}>
+                {card.title}
+              </h3>
+              <p className={`mb-8 flex-grow ${card.bgColor === 'bg-[#E2C1A5]' ? 'text-[#18413F]' : 'text-white'}`}>
+                {card.description}
+              </p>
+              <button
+                className={`px-6 py-2 rounded-[53px] transition-colors ${
+                  card.bgColor === 'bg-[#E2C1A5]' 
+                    ? 'bg-[#18413F] text-[#E2C1A5] hover:bg-opacity-90' 
+                    : 'bg-[#E2C1A5] text-[#18413F] hover:bg-opacity-90'
+                }`}
               >
-                <img src={card.icon} alt={card.title} className="w-12 h-12 mb-6" />
-                <h3 className={`text-xl font-bold mb-4 ${card.textColor}`}>
-                  {card.title}
-                </h3>
-                <p className={`mb-8 flex-grow ${card.textColor}`}>
-                  {card.description}
-                </p>
-                <button
-                  className={`px-6 py-2 rounded-[53px] transition-colors ${card.buttonBg} ${card.textColor === "text-[#19413F]" ? "text-[#E2C1A5]" : "text-[#19413F]"} hover:bg-opacity-90`}
-                >
-                  {card.buttonText}
-                </button>
-              </motion.div>
-            ))}
-          </div>
+                {card.buttonText}
+              </button>
+            </motion.div>
+          ))}
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </motion.section>
   );
 }
