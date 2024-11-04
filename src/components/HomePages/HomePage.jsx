@@ -9,7 +9,7 @@ import MeetPrincipalSection from '@/components/HomePages/MeetPrincipalSection';
 import ConnectWithUsSection from './ContactUs';
 import ThrivingCommunity from './ThrivingCommunity';
 import UnlockingTheFuture from './UnlockingTheFuture';
-import EducationSection from './EducationSection';
+import EducationSection from './EducationSection1';
 import CommunitySection from './Community';
 
 const ImageSlider = () => {

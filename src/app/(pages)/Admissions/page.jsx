@@ -3,6 +3,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import NavBar from '@/components/NavigationMenu';
 import WelcomeSection from '@/components/HomePages/WelcomeSection';
+import EducationSection from '@/components/AdmissionPages/EducationalSection';
+import EducationSection1 from '@/components/HomePages/EducationSection1';
+import CommunitySection from '@/components/HomePages/Community';
+import Footer from '@/components/Footer';
 
 const SchoolLanding = () => {
   return (
@@ -70,6 +74,11 @@ const SchoolLanding = () => {
 
     <div>
         <WelcomeSection/>
+        <EducationSection/>
+        <EducationSection1/>
+        <CommunitySection/>
+        <Footer/>
+        
     </div>
     </>
   );

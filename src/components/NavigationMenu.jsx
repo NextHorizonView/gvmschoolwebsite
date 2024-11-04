@@ -84,7 +84,7 @@ export default function NavBar() {
                 >
                     <nav className="flex flex-col space-y-6 text-white text-lg" style={{ fontFamily: 'Poppins, sans-serif' }}>
                         <Link href="/" className="hover:text-gray-300 transition-colors">Home</Link>
-                        <Link href="/admissions" className="hover:text-gray-300 transition-colors">Admissions</Link>
+                        <Link href="/Admissions" className="hover:text-gray-300 transition-colors">Admissions</Link>
                         <Link href="/team" className="hover:text-gray-300 transition-colors">Team</Link>
                         <Link href="/contact" className="hover:text-gray-300 transition-colors">Contact</Link>
                         <Link href="/faq" className="hover:text-gray-300 transition-colors">FAQ</Link>

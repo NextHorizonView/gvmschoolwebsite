@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const EducationSection = () => {
+const EducationSection1 = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -78,4 +78,4 @@ const EducationSection = () => {
   );
 };
 
-export default EducationSection;
+export default EducationSection1;
