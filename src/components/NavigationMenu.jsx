@@ -30,6 +30,7 @@ export default function NavBar() {
                         />
                     </div>
                     <div className="flex flex-col text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                        
                         <h1 className="text-3xl font-bold opacity-80">Gyanodaya</h1>
                         <h2 className="text-3xl font-bold opacity-80">Vidya Mandir</h2>
                         <h3 className="text-3xl font-bold opacity-80">High School</h3>
@@ -40,7 +41,7 @@ export default function NavBar() {
                 <div className="hidden md:flex items-center gap-8">
                     <nav className="flex gap-8 items-center text-white text-lg" style={{ fontFamily: 'Poppins, sans-serif' }}>
                         <Link href="/" className="hover:text-gray-300 transition-colors">Home</Link>
-                        <Link href="/admissions" className="hover:text-gray-300 transition-colors">Admissions</Link>
+                        <Link href="/Admissions" className="hover:text-gray-300 transition-colors">Admissions</Link>
                         <Link href="/team" className="hover:text-gray-300 transition-colors">Team</Link>
                         <Link href="/contact" className="hover:text-gray-300 transition-colors">Contact</Link>
                         <div className="bg-black/20 backdrop-blur-sm rounded-full px-6 py-2">
