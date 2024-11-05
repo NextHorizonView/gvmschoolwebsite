@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -27,100 +28,76 @@ const Footer = () => {
         {/* Quick Links */}
         <div className="space-y-2">
           <h3 className="font-semibold text-gray-900">Quick Links</h3>
-          <motion.a 
-            href="#home" 
-            className="block text-gray-700 hover:text-gray-900" 
-            whileHover={{ scale: 1.05 }}
-          >
-            Home
-          </motion.a>
-          <motion.a 
-            href="#about" 
-            className="block text-gray-700 hover:text-gray-900" 
-            whileHover={{ scale: 1.05 }}
-          >
-            About
-          </motion.a>
-          <motion.a 
-            href="#programs" 
-            className="block text-gray-700 hover:text-gray-900" 
-            whileHover={{ scale: 1.05 }}
-          >
-            Programs
-          </motion.a>
-          <motion.a 
-            href="#contact" 
-            className="block text-gray-700 hover:text-gray-900" 
-            whileHover={{ scale: 1.05 }}
-          >
-            Contact
-          </motion.a>
+          <Link href="/">
+            <motion.a className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
+              Home
+            </motion.a>
+          </Link>
+          <Link href="/Admissions">
+            <motion.a className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
+              Admissions
+            </motion.a>
+          </Link>
+          <Link href="/Staff">
+            <motion.a className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
+              Team
+            </motion.a>
+          </Link>
+          <Link href="/">
+            <motion.a className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
+              Contact
+            </motion.a>
+          </Link>
         </div>
         
         {/* Our Mission */}
         <div className="space-y-2">
           <h3 className="font-semibold text-gray-900">Our Mission</h3>
-          <motion.a 
-            href="#vision" 
-            className="block text-gray-700 hover:text-gray-900" 
-            whileHover={{ scale: 1.05 }}
-          >
-            Vision
-          </motion.a>
-          <motion.a 
-            href="#values" 
-            className="block text-gray-700 hover:text-gray-900" 
-            whileHover={{ scale: 1.05 }}
-          >
-            Values
-          </motion.a>
-          <motion.a 
-            href="#history" 
-            className="block text-gray-700 hover:text-gray-900" 
-            whileHover={{ scale: 1.05 }}
-          >
-            History
-          </motion.a>
-          <motion.a 
-            href="#partnerships" 
-            className="block text-gray-700 hover:text-gray-900" 
-            whileHover={{ scale: 1.05 }}
-          >
-            Partnerships
-          </motion.a>
+          <Link href="#vision">
+            <motion.a className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
+              Vision
+            </motion.a>
+          </Link>
+          <Link href="#values">
+            <motion.a className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
+              Values
+            </motion.a>
+          </Link>
+          <Link href="#history">
+            <motion.a className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
+              History
+            </motion.a>
+          </Link>
+          <Link href="#partnerships">
+            <motion.a className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
+              Partnerships
+            </motion.a>
+          </Link>
         </div>
         
         {/* Connect with Us */}
         <div className="space-y-2">
           <h3 className="font-semibold text-gray-900">Connect with Us</h3>
-          <motion.a 
-            href="#facebook" 
-            className="block text-gray-700 hover:text-gray-900" 
-            whileHover={{ scale: 1.05 }}
-          >
-            Facebook
-          </motion.a>
-          <motion.a 
-            href="#twitter" 
-            className="block text-gray-700 hover:text-gray-900" 
-            whileHover={{ scale: 1.05 }}
-          >
-            Twitter
-          </motion.a>
-          <motion.a 
-            href="#instagram" 
-            className="block text-gray-700 hover:text-gray-900" 
-            whileHover={{ scale: 1.05 }}
-          >
-            Instagram
-          </motion.a>
-          <motion.a 
-            href="#linkedin" 
-            className="block text-gray-700 hover:text-gray-900" 
-            whileHover={{ scale: 1.05 }}
-          >
-            LinkedIn
-          </motion.a>
+          <Link href="#facebook">
+            <motion.a className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
+              Facebook
+            </motion.a>
+          </Link>
+          <Link href="#twitter">
+            <motion.a className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
+              Twitter
+            </motion.a>
+          </Link>
+          <Link href="#instagram">
+            <motion.a className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
+              Instagram
+            </motion.a>
+          </Link>
+          <Link href="#linkedin">
+            <motion.a className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
+              LinkedIn
+            </motion.a>
+          </Link>
         </div>
       </div>
     </footer>
