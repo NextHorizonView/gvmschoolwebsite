@@ -1,14 +1,13 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
-import NavBar from '@/components/NavigationMenu';
 import WelcomeSection from '@/components/HomePages/WelcomeSection';
 import EducationSection from '@/components/AdmissionPages/EducationalSection';
 import EducationSection1 from '@/components/HomePages/EducationSection1';
 import CommunitySection from '@/components/HomePages/Community';
-import Footer from '@/components/Footer';
 
-const SchoolLanding = () => {
+
+const page = () => {
   return (
     <>
     <div className="relative w-full min-h-screen">
@@ -20,9 +19,7 @@ const SchoolLanding = () => {
           filter: "brightness(0.9)"
         }}
       />
-      
-      {/* Navigation Bar */}
-      <NavBar/>
+     
 
       {/* Main Content */}
       <div className="relative z-10 max-w-[1400px] mx-auto min-h-[calc(100vh-80px)] flex flex-col lg:flex-row justify-center lg:justify-between items-center px-4 md:px-12 lg:px-24 py-8 lg:py-0">
@@ -77,11 +74,11 @@ const SchoolLanding = () => {
         <EducationSection/>
         <EducationSection1/>
         <CommunitySection/>
-        <Footer/>
+      
         
     </div>
     </>
   );
 };
 
-export default SchoolLanding;
+export default page;

@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import NavBar from '../NavigationMenu';
 import AboutUsSection from '@/components/HomePages/AboutUsSection';
 import WelcomeSection from '@/components/HomePages/WelcomeSection';
 import MeetPrincipalSection from '@/components/HomePages/MeetPrincipalSection';
@@ -113,7 +112,7 @@ export default function HomePage() {
       </div>
 
       {/* Navigation */}
-      <NavBar />
+      
 
       {/* Hero Content */}
       <motion.div

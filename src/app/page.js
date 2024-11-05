@@ -8,9 +8,9 @@ import NavBar from "@/components/NavigationMenu";
 export default function Home() {
   return (
     <div className="relative">
-      <NavBar />
+      
       <HomePage/>
-      <Footer/>
+      
       {/* <EducationalSection/> */}
     </div>
   );
