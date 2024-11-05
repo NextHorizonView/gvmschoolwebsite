@@ -7,11 +7,11 @@ import FirstPrincipalSection from '@/components/Staff/FirstPrincipalSection';
 import StaffSection from '@/components/Staff/StaffSection1';
 import StaffSection2 from '@/components/Staff/StaffSection2';
 import NonTeachingStaff from '@/components/Staff/NonTeachingStaff';
-
-
+import Possibilities from '@/components/Staff/MeetThePossibilites';
+import CommunitySection from '@/components/HomePages/Community';
 
 const page = () => {
-    return (
+  return (
     <>
       <div className="relative w-full min-h-screen">
         {/* Background Image */}
@@ -23,7 +23,6 @@ const page = () => {
           }}
         />
      
-  
         {/* Main Content */}
         <div className="relative z-10 max-w-[1400px] mx-auto min-h-[calc(100vh-80px)] flex flex-col lg:flex-row justify-center lg:justify-between items-center px-4 md:px-12 lg:px-24 py-8 lg:py-0">
           {/* Left Side - Heading */}
@@ -34,7 +33,7 @@ const page = () => {
               transition={{ duration: 0.8 }}
               className="mb-4 lg:mb-6 text-lg lg:text-xl text-gray-700 tracking-wide"
             >
-            THE MINDS THAT SHAPE GVMH
+              THE MINDS THAT SHAPE GVMH
             </motion.div>
   
             <motion.h1
@@ -71,15 +70,30 @@ const page = () => {
           </div>
         </div>
       </div>
+
       <div>
-          <WelcomeSection/>
-          <FoundingFathersSection/>
-          <FirstPrincipalSection/>
-          <StaffSection/>
-          <StaffSection2/>
-          <NonTeachingStaff/>
+        <WelcomeSection/>
+        <FoundingFathersSection/>
+        <FirstPrincipalSection/>
+        <StaffSection/>
+        <StaffSection2/>
+        <NonTeachingStaff/>
+
+        {/* Full-Width Image with Animation */}
+        <motion.img
+          src="https://res.cloudinary.com/diowslfww/image/upload/v1730810929/g2mlisaaldaw56bpu3te.png"
+          alt="Group Photo"
+          className="w-full h-auto object-cover"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        />
       </div>
-      </>
-    )}
+
+      <Possibilities/>
+      <CommunitySection/>
+    </>
+  )
+};
 
 export default page;
