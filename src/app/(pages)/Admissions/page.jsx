@@ -2,9 +2,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import WelcomeSection from '@/components/HomePages/WelcomeSection';
-import EducationSection from '@/components/AdmissionPages/EducationalSection';
 import EducationSection1 from '@/components/HomePages/EducationSection1';
 import CommunitySection from '@/components/HomePages/Community';
+import PrimaryAdmissionSection from '@/components/AdmissionPages/PrimaryAdmissonSection';
+import SecondaryEducation from '@/components/AdmissionPages/SecondaryAdmissionSection';
 
 
 const page = () => {
@@ -71,7 +72,8 @@ const page = () => {
 
     <div>
         <WelcomeSection/>
-        <EducationSection/>
+        <PrimaryAdmissionSection/>
+        <SecondaryEducation/>
         <EducationSection1/>
         <CommunitySection/>
       

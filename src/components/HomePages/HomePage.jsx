@@ -5,11 +5,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import AboutUsSection from '@/components/HomePages/AboutUsSection';
 import WelcomeSection from '@/components/HomePages/WelcomeSection';
 import MeetPrincipalSection from '@/components/HomePages/MeetPrincipalSection';
-import ConnectWithUsSection from './ContactUs';
+import ConnectWithUsSection from './ConnectWithUs';
 import ThrivingCommunity from './ThrivingCommunity';
 import UnlockingTheFuture from './UnlockingTheFuture';
 import EducationSection from './EducationSection1';
 import CommunitySection from './Community';
+import ContactSection from './ContactUs';
+import PrimaryEnquiryForm from '../Forms/PrimaryEnquiryForm';
+import PrimaryEducationSection from './PrimaryEducationSection';
+import SecondaryEducationSection from './SecondaryEducationSection';
+import SecondaryEnquiryForm from './SecondaryEnquiryForm';
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -139,8 +144,12 @@ export default function HomePage() {
       <MeetPrincipalSection />
       <ConnectWithUsSection />
       <ThrivingCommunity/>
+      <ContactSection/>
       <UnlockingTheFuture/>
-      <EducationSection/>
+      <PrimaryEducationSection/>
+      <PrimaryEnquiryForm/>
+      <SecondaryEducationSection/>
+      <SecondaryEnquiryForm/>
       <CommunitySection/>
     </div>
   );

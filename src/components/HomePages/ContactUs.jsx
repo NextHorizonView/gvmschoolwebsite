@@ -1,112 +1,108 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, Phone, Globe, Building2 } from 'lucide-react';
 
-const ConnectWithUsSection = () => {
-    const textVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-    };
+const ContactSection = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
+  };
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1, transition: { duration: 0.5, staggerChildren: 0.3 } }
-    };
+  const contentVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { 
+        duration: 0.6, 
+        ease: "easeOut" 
+      } 
+    },
+  };
 
-    const cardVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+  };
 
-    const cards = [
-        {
-            icon: <Users className="w-12 h-12 text-[#18413F]" />,
-            title: "Faculty",
-            description: "Contact and meet our faculty to know more about us",
-            buttonText: "Plan a Visit",
-            bgColor: "bg-[#E2C1A5]"
-        },
-        {
-            icon: <Phone className="w-12 h-12 text-white" />,
-            title: "Contact Information",
-            description: "Get in touch with our dedicated admissions team to learn more about our programs and explore your options",
-            buttonText: "Reach Out",
-            bgColor: "bg-[#18413F]"
-        },
-        {
-            icon: <Globe className="w-12 h-12 text-white" />,
-            title: "Stay Connected",
-            description: "Follow us on social media and to stay up-to-date with the latest news and events",
-            buttonText: "Join Our Community",
-            bgColor: "bg-[#19413F]"
-        },
-        {
-            icon: <Building2 className="w-12 h-12 text-[#18413F]" />,
-            title: "Partners and Affiliations",
-            description: "Explore our collaborations with industry leaders and renowned institutions",
-            buttonText: "Learn More",
-            bgColor: "bg-[#E2C1A5]"
-        }
-    ];
-
-    return (
-        <motion.section
-            className="relative w-full min-h-screen py-16 md:py-24"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-        >
-            {/* Background Image */}
-            <div className="absolute inset-0 w-full h-full">
-                <img
-                    src="https://res.cloudinary.com/diowslfww/image/upload/v1730611515/lxhilihugq6gezsik2di.png"
-                    alt="Background"
-                    className="w-full h-full object-cover"
+  return (
+    <motion.section
+      className="w-full bg-[#143B3C] text-white min-h-screen flex items-center justify-center"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.2 }}
+      variants={containerVariants}
+    >
+      <div className="max-w-5xl w-full px-4 md:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
+          {/* Get in Touch Section */}
+          <motion.div
+            className="space-y-6"
+            variants={contentVariants}
+          >
+            <div className="space-y-3">
+              <h2 className="text-3xl font-bold tracking-wide">GET IN TOUCH</h2>
+              <p className="text-gray-400 text-sm">Anything in your mind?</p>
+              <p className="text-gray-400 text-sm">Request a call from our team</p>
+            </div>
+            
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <input
+                  type="text"
+                  placeholder="YOUR NAME"
+                  className="w-full p-2 bg-transparent border border-gray-600 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400"
                 />
-            </div>
+              </div>
+              <div>
+                <input
+                  type="tel"
+                  placeholder="PHONE NUMBER"
+                  className="w-full p-2 bg-transparent border border-gray-600 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400"
+                />
+              </div>
+              <button
+                type="submit"
+                className="bg-emerald-400 text-white px-6 py-2 rounded-3xl text-sm hover:bg-emerald-500 transition-colors"
+              >
+                Send a request
+              </button>
+            </form>
+          </motion.div>
 
-            {/* Content Container */}
-            <div className="relative max-w-7xl mx-auto px-4 md:px-8">
-                {/* Heading */}
-                <motion.h2 
-                    variants={textVariants}
-                    className="unica-one-regular text-4xl md:text-5xl lg:text-6xl text-[#18413F] text-center mb-16"
-                >
-                    Connect With Us
-                </motion.h2>
-
-                {/* Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {cards.map((card, index) => (
-                        <motion.div
-                            key={index}
-                            variants={cardVariants}
-                            className={`${card.bgColor} rounded-sm p-8 flex flex-col items-center text-center min-h-[350px]`}
-                        >
-                            <div className="mb-6">
-                                {card.icon}
-                            </div>
-                            <h3 className={`text-xl font-bold mb-4 ${card.bgColor === 'bg-[#E2C1A5]' ? 'text-[#18413F]' : 'text-white'}`}>
-                                {card.title}
-                            </h3>
-                            <p className={`mb-8 flex-grow ${card.bgColor === 'bg-[#E2C1A5]' ? 'text-[#18413F]' : 'text-white'}`}>
-                                {card.description}
-                            </p>
-                            <button 
-                                className={`px-6 py-2 rounded-[53px] transition-colors ${
-                                    card.bgColor === 'bg-[#E2C1A5]' 
-                                        ? 'bg-[#18413F] text-[#E2C1A5] hover:bg-opacity-90' 
-                                        : 'bg-[#E2C1A5] text-[#18413F] hover:bg-opacity-90'
-                                }`}
-                            >
-                                {card.buttonText}
-                            </button>
-                        </motion.div>
-                    ))}
-                </div>
+          {/* Contact Information Section */}
+          <motion.div
+            className="space-y-6"
+            variants={contentVariants}
+          >
+            <h2 className="text-3xl font-bold tracking-wide">CONTACT US</h2>
+            
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-gray-400 text-sm mb-1">Phone number</h3>
+                <p className="text-sm">+1 (999) 999-99-99</p>
+              </div>
+              
+              <div>
+                <h3 className="text-gray-400 text-sm mb-1">Gmail</h3>
+                <p className="text-sm">Gyanodayavidyamandir.com</p>
+              </div>
+              
+              <div>
+                <h3 className="text-gray-400 text-sm mb-1">Address</h3>
+                <p className="text-sm">Vile Parle, Mumbai, Maharashtra, India</p>
+              </div>
             </div>
-        </motion.section>
-    );
+          </motion.div>
+        </div>
+      </div>
+    </motion.section>
+  );
 };
 
-export default ConnectWithUsSection;
+export default ContactSection;

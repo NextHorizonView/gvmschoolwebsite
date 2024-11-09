@@ -14,7 +14,7 @@ export default function UnlockingTheFuture() {
     >
       {/* Main Heading */}
       <motion.h2
-        className="text-4xl font-bold text-[#1E2A5E] mb-4"
+        className="text-4xl font-bold text-[#2C3A4F] mb-4"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6 }}
@@ -38,7 +38,7 @@ export default function UnlockingTheFuture() {
       
       {/* Button */}
       <motion.button
-        className="bg-[#1E2A5E] text-white py-2 px-8 rounded-md text-lg font-semibold shadow-lg hover:bg-[#172448]"
+        className="bg-[#143B3C] text-white py-2 px-8 rounded-md border border-white/60 text-lg font-semibold shadow-lg hover:bg-[#172448]"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.6, duration: 0.6 }}
