@@ -8,13 +8,13 @@ import MeetPrincipalSection from '@/components/HomePages/MeetPrincipalSection';
 import ConnectWithUsSection from './ConnectWithUs';
 import ThrivingCommunity from './ThrivingCommunity';
 import UnlockingTheFuture from './UnlockingTheFuture';
-import EducationSection from './EducationSection1';
+// import EducationSection from './EducationSection1';
 import CommunitySection from './Community';
-import ContactSection from './ContactUs';
-import PrimaryEnquiryForm from '../Forms/PrimaryEnquiryForm';
+// import ContactSection from './ContactUs';
+// import PrimaryEnquiryForm from '../Forms/PrimaryEnquiryForm';
 import PrimaryEducationSection from './PrimaryEducationSection';
 import SecondaryEducationSection from './SecondaryEducationSection';
-import SecondaryEnquiryForm from './SecondaryEnquiryForm';
+// import SecondaryEnquiryForm from './SecondaryEnquiryForm';
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -144,12 +144,12 @@ export default function HomePage() {
       <MeetPrincipalSection />
       <ConnectWithUsSection />
       <ThrivingCommunity/>
-      <ContactSection/>
+      {/* <ContactSection/> */}
       <UnlockingTheFuture/>
       <PrimaryEducationSection/>
-      <PrimaryEnquiryForm/>
+      {/* <PrimaryEnquiryForm/> */}
       <SecondaryEducationSection/>
-      <SecondaryEnquiryForm/>
+      {/* <SecondaryEnquiryForm/> */}
       <CommunitySection/>
     </div>
   );

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -12,7 +13,7 @@ const ContactSection = () => {
       },
     },
   };
-
+  
   const contentVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -32,23 +33,38 @@ const ContactSection = () => {
 
   return (
     <motion.section
-      className="w-full bg-[#143B3C] text-white min-h-screen flex items-center justify-center"
+      className="w-full min-h-screen flex items-center justify-center relative p-4 pt-20 md:pt-12"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.2 }}
       variants={containerVariants}
     >
-      <div className="max-w-5xl w-full px-4 md:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0 "
+        style={{
+          backgroundImage: 'url(https://res.cloudinary.com/diowslfww/image/upload/v1730548984/mbfasiufmgutamgbixxv.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0"></div>
+      </div>
+
+      {/* Content */}
+      <div className="max-w-5xl w-full px-4 md:px-6 lg:px-8 py-8 relative z-10 pt-28 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Get in Touch Section */}
           <motion.div
-            className="space-y-6"
+            className="space-y-6 backdrop-blur-xl p-8 rounded-2xl"
             variants={contentVariants}
           >
             <div className="space-y-3">
-              <h2 className="text-3xl font-bold tracking-wide">GET IN TOUCH</h2>
-              <p className="text-gray-400 text-sm">Anything in your mind?</p>
-              <p className="text-gray-400 text-sm">Request a call from our team</p>
+              <h2 className="text-3xl font-bold tracking-wide text-black">GET IN TOUCH</h2>
+              <p className="text-black text-sm">Anything in your mind?</p>
+              <p className="text-black text-sm">Request a call from our team</p>
             </div>
             
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -56,19 +72,19 @@ const ContactSection = () => {
                 <input
                   type="text"
                   placeholder="YOUR NAME"
-                  className="w-full p-2 bg-transparent border border-gray-600 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400"
+                  className="w-full p-3 bg-white/10 border border-white/20 rounded-xl text-black text-sm focus:outline-none focus:border-white/40 transition-colors"
                 />
               </div>
               <div>
                 <input
                   type="tel"
                   placeholder="PHONE NUMBER"
-                  className="w-full p-2 bg-transparent border border-gray-600 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400"
+                  className="w-full p-3 bg-white/10 border border-white/20 rounded-xl text-black text-sm focus:outline-none focus:border-white/40 transition"
                 />
               </div>
               <button
                 type="submit"
-                className="bg-emerald-400 text-white px-6 py-2 rounded-3xl text-sm hover:bg-emerald-500 transition-colors"
+                className="bg-emerald-400 text-black px-8 py-3 rounded-3xl text-sm hover:bg-emerald-500 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/20"
               >
                 Send a request
               </button>
@@ -77,25 +93,25 @@ const ContactSection = () => {
 
           {/* Contact Information Section */}
           <motion.div
-            className="space-y-6"
+            className="space-y-6 backdrop-blur-xl p-8 rounded-2xl border-white/10"
             variants={contentVariants}
           >
-            <h2 className="text-3xl font-bold tracking-wide">CONTACT US</h2>
+            <h2 className="text-3xl font-bold tracking-wide text-black">CONTACT US</h2>
             
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-gray-400 text-sm mb-1">Phone number</h3>
-                <p className="text-sm">+1 (999) 999-99-99</p>
+            <div className="space-y-8">
+              <div className="group">
+                <h3 className="text-black text-sm mb-2">Phone number</h3>
+                <p className="text-black text-sm font-medium">+1 (999) 999-99-99</p>
               </div>
               
-              <div>
-                <h3 className="text-gray-400 text-sm mb-1">Gmail</h3>
-                <p className="text-sm">Gyanodayavidyamandir.com</p>
+              <div className="group">
+                <h3 className="text-black text-sm mb-2">Gmail</h3>
+                <p className="text-black text-sm font-medium">Gyanodayavidyamandir.com</p>
               </div>
               
-              <div>
-                <h3 className="text-gray-400 text-sm mb-1">Address</h3>
-                <p className="text-sm">Vile Parle, Mumbai, Maharashtra, India</p>
+              <div className="group">
+                <h3 className="text-black text-sm mb-2">Address</h3>
+                <p className="text-black text-sm font-medium">Vile Parle, Mumbai, Maharashtra, India</p>
               </div>
             </div>
           </motion.div>
