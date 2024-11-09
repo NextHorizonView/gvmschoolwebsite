@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const NonTeachingStaff = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
 
   const staffImages = [
     { id: 1, imageUrl: "https://res.cloudinary.com/diowslfww/image/upload/v1730809918/kos8wfcxjkjgnayelgcv.png" },
     { id: 2, imageUrl: "https://res.cloudinary.com/diowslfww/image/upload/v1730809618/nd3byyd3rqmcur4kqdaa.png" }
   ];
+
+  useEffect(() => {
+    // Delay to ensure the component is mounted to prevent hydration errors
+    setIsMounted(true);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % staffImages.length);
@@ -18,6 +24,8 @@ const NonTeachingStaff = () => {
     setCurrentSlide((prev) => (prev - 1 + staffImages.length) % staffImages.length);
   };
 
+  if (!isMounted) return null;
+
   return (
     <div className="w-full bg-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,14 +34,13 @@ const NonTeachingStaff = () => {
         <div className="mb-12">
           <div className="relative w-full max-w-3xl mx-auto">
             {/* Slider Container */}
-            <div className="overflow-hidden rounded-lg">
-              <AnimatePresence initial={false}>
+            <div className="overflow-hidden rounded-lg relative">
+              <AnimatePresence mode="wait">
                 <motion.div
                   key={currentSlide}
-                  className="w-full flex-shrink-0"
-                  initial={{ x: 300, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  exit={{ x: -300, opacity: 0 }}
+                  initial={{ opacity: 0, x: 300 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -300 }}
                   transition={{ duration: 0.5 }}
                 >
                   <img
@@ -45,25 +52,21 @@ const NonTeachingStaff = () => {
               </AnimatePresence>
             </div>
 
-            {/* Navigation Buttons with Framer Motion */}
-            <motion.button
+            {/* Navigation Buttons */}
+            <button
               onClick={prevSlide}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-6 h-6 text-gray-600" />
-            </motion.button>
-            <motion.button
+            </button>
+            <button
               onClick={nextSlide}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 transition-colors"
               aria-label="Next slide"
             >
               <ChevronRight className="w-6 h-6 text-gray-600" />
-            </motion.button>
+            </button>
 
             {/* Dots Navigation */}
             <div className="flex justify-center gap-2 mt-4">
@@ -101,7 +104,7 @@ const NonTeachingStaff = () => {
         >
           <div className="rounded-lg p-8">
             <p className="text-gray-700 text-lg leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim .
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
             </p>
           </div>
         </motion.div>
