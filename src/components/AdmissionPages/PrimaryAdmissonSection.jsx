@@ -8,8 +8,8 @@ const PrimaryAdmissionSection = () => {
     <div className="relative w-full min-h-screen">
       {/* Primary Education Section */}
       <div
-        className="relative h-[100vh] w-full bg-cover bg-center"
-        style={{ backgroundImage: "url('https://res.cloudinary.com/diowslfww/image/upload/v1730611515/lxhilihugq6gezsik2di.png')" }}
+        className="relative h-[100vh] w-full bg-cover bg-center "
+        style={{ backgroundImage: "url('https://res.cloudinary.com/diowslfww/image/upload/v1730611515/lxhilihugq6gezsik2di.png')," }}
       >
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24 py-16 md:py-20">
@@ -32,6 +32,7 @@ const PrimaryAdmissionSection = () => {
             </motion.div>
           </div>
         </div>
+        
       </div>
 
       {/* Primary Education Image Grid Section */}

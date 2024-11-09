@@ -1,8 +1,14 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { addAdmissionEnquiry } from '@/firebase/EnquiryForm/write';
 
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    EnquiryFirstName: '',
+    EnquiryPhoneNumber: '',
+    EnquirySection:'Business',
+  });
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -25,10 +31,23 @@ const ContactSection = () => {
       } 
     },
   };
-
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    try {
+      const enquiryId = await addAdmissionEnquiry(formData);
+      alert(`Enquiry submitted Successfully`);
+      setFormData({
+        EnquiryFirstName: '',
+        EnquiryPhoneNumber: '',
+      });
+    } catch (error) {
+      console.error("Error submitting enquiry",);
+      alert("Failed to submit enquiry. Please try again.");
+    }
   };
 
   return (
@@ -72,12 +91,18 @@ const ContactSection = () => {
                 <input
                   type="text"
                   placeholder="YOUR NAME"
+                  name="EnquiryFirstName"
+                  value={formData.EnquiryFirstName}
+                  onChange={handleChange}
                   className="w-full p-3 bg-white/10 border border-white/20 rounded-xl text-black text-sm focus:outline-none focus:border-white/40 transition-colors"
                 />
               </div>
               <div>
                 <input
                   type="tel"
+                  name="EnquiryPhoneNumber"
+                  value={formData.EnquiryPhoneNumber}
+                  onChange={handleChange}
                   placeholder="PHONE NUMBER"
                   className="w-full p-3 bg-white/10 border border-white/20 rounded-xl text-black text-sm focus:outline-none focus:border-white/40 transition"
                 />

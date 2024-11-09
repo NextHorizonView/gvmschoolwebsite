@@ -52,6 +52,7 @@ const ImageSlider = () => {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
+       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
       <AnimatePresence initial={false} custom={currentIndex}>
         <motion.img
           key={currentIndex}
@@ -81,9 +82,7 @@ const ImageSlider = () => {
             }`}
           />
         ))}
-      </div>
-
-      
+      </div>      
     </div>
 )
 };
@@ -126,7 +125,7 @@ export default function HomePage() {
         initial="hidden"
         animate="visible"
       >
-        <div className="text-center max-w-4xl px-4">
+        <div className="text-center max-w-4xl px-4 ">
           <motion.div variants={textVariants} className="space-y-2">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">
               The Power of Education:
