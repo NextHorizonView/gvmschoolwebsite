@@ -7,7 +7,7 @@ export const addAdmissionEnquiry = async (enquiryData) => {
     const docRef = await addDoc(collection(firestore, "AdmissionEnquiry"), enquiryData);
     
     // Update the document to set EnquiryId as the document ID
-    await updateDoc(doc(firestore, "AdmissionEnquiry", docRef.id), { EnquiryId: docRef.id,EnquirySection: enquiryData.EnquirySection  });
+    await updateDoc(doc(firestore, "AdmissionEnquiry", docRef.id), { EnquiryId: docRef.id,EnquirySection: enquiryData.EnquirySection ,EnquirySchoolId : "" });
     
     return docRef.id; // Return the EnquiryId (which is the document ID)
   } catch (error) {
