@@ -36,7 +36,7 @@ const ConnectWithUsSection = () => {
         {
             icon: <Globe className="w-12 h-12 text-white" />,
             title: "Stay Connected",
-            description: "Follow us on social media and to stay up-to-date with the latest news and events",
+            description: "Follow us on social media to stay up-to-date with the latest news and events",
             buttonText: "Join Our Community",
             bgColor: "bg-[#19413F]"
         },
@@ -54,7 +54,8 @@ const ConnectWithUsSection = () => {
             className="relative w-full min-h-screen py-16 md:py-24"
             variants={containerVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
         >
             {/* Background Image */}
             <div className="absolute inset-0 w-full h-full">
@@ -81,6 +82,8 @@ const ConnectWithUsSection = () => {
                         <motion.div
                             key={index}
                             variants={cardVariants}
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
                             className={`${card.bgColor} rounded-sm p-8 flex flex-col items-center text-center min-h-[350px]`}
                         >
                             <div className="mb-6">

@@ -8,8 +8,8 @@ const PrimaryAdmissionSection = () => {
     <div className="relative w-full min-h-screen">
       {/* Primary Education Section */}
       <div
-        className="relative h-[100vh] w-full bg-cover bg-center "
-        style={{ backgroundImage: "url('https://res.cloudinary.com/diowslfww/image/upload/v1730611515/lxhilihugq6gezsik2di.png')," }}
+        className="relative h-[100vh] w-full bg-cover bg-center"
+        style={{ backgroundImage: "url('https://res.cloudinary.com/diowslfww/image/upload/v1730611515/lxhilihugq6gezsik2di.png')" }}
       >
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24 py-16 md:py-20">
@@ -20,7 +20,7 @@ const PrimaryAdmissionSection = () => {
               className="max-w-2xl"
             >
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4">Primary Education</h1>
-              <p className="text-lg md:text-xl text-black italic mb-6">Collaborative, challenging and enjoyable learning experiences.</p>
+              <p className="text-lg md:text-xl text-black italic mb-6">Collaborative, challenging, and enjoyable learning experiences.</p>
               <p className="text-base md:text-lg text-black mb-8 leading-relaxed">
                 At our school, Primary Education is all about nurturing young minds and laying a strong foundation for lifelong learning. In these formative years, we focus on developing key skills in literacy, numeracy, critical thinking, and creativity. Our engaging, hands-on curriculum is designed to spark curiosity and foster a love for learning.
               </p>
@@ -32,7 +32,6 @@ const PrimaryAdmissionSection = () => {
             </motion.div>
           </div>
         </div>
-        
       </div>
 
       {/* Primary Education Image Grid Section */}

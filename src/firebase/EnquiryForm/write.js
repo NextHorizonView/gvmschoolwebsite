@@ -1,5 +1,5 @@
 import { firestore } from "../firebaseconfig";
-import { collection, addDoc, updateDoc, doc } from "firebase/firestore";  // Import necessary Firestore functions
+import { collection, addDoc, updateDoc, doc } from "firebase/firestore";
 
 export const addAdmissionEnquiry = async (enquiryData) => {
   try {

@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "@/components/NavigationMenu";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata = {
   title: "Gyanoday Vidya Mandir",
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
       <body>
         
         {children}
+        <ScrollToTop />
         <NavBar/>
         <Footer/>
       </body>
