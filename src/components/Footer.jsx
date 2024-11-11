@@ -5,20 +5,20 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F5F5F5] py-8 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center lg:text-left">
+    <footer className="bg-[#F5F5F5] py-4 px-4 md:py-8 md:px-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center lg:text-left">
         
         {/* Logo and Copyright */}
         <div className="flex flex-col items-center lg:items-start">
           <motion.img
             src="https://res.cloudinary.com/diowslfww/image/upload/v1730352732/jluyshuiettxfwihtz22.png" 
             alt="School Logo"
-            className="w-20 h-20 mb-4"
+            className="w-16 h-16 mb-2 md:w-20 md:h-20 md:mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           />
-          <p className="text-gray-700 text-sm">
+          <p className="text-gray-700 text-xs md:text-sm">
             © 2024 Gyanodaya Vidya Mandir High School, Inc.
             <br />
             All rights reserved.
@@ -46,31 +46,6 @@ const Footer = () => {
           <Link href="/" passHref>
             <motion.span className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
               Contact
-            </motion.span>
-          </Link>
-        </div>
-        
-        {/* Our Mission */}
-        <div className="space-y-2">
-          <h3 className="font-semibold text-gray-900">Our Mission</h3>
-          <Link href="#vision" passHref>
-            <motion.span className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
-              Vision
-            </motion.span>
-          </Link>
-          <Link href="#values" passHref>
-            <motion.span className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
-              Values
-            </motion.span>
-          </Link>
-          <Link href="#history" passHref>
-            <motion.span className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
-              History
-            </motion.span>
-          </Link>
-          <Link href="#partnerships" passHref>
-            <motion.span className="block text-gray-700 hover:text-gray-900" whileHover={{ scale: 1.05 }}>
-              Partnerships
             </motion.span>
           </Link>
         </div>
