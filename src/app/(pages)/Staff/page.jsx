@@ -1,5 +1,5 @@
-'use client'
-import React from 'react';
+'use client';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import WelcomeSection from '@/components/HomePages/WelcomeSection';
 import FoundingFathersSection from '@/components/Staff/FoundingFathers';
@@ -10,7 +10,22 @@ import NonTeachingStaff from '@/components/Staff/NonTeachingStaff';
 import Possibilities from '@/components/Staff/MeetThePossibilites';
 import CommunitySection from '@/components/HomePages/Community';
 
-const page = () => {
+const Page = () => {
+  const principalRef = useRef(null);
+  const teamRef = useRef(null);
+
+  const scrollToPrincipal = () => {
+    if (principalRef.current) {
+      principalRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const scrollToTeam = () => {
+    if (teamRef.current) {
+      teamRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <>
       <div className="relative w-full min-h-screen">
@@ -49,6 +64,7 @@ const page = () => {
           {/* Right Side - Section Buttons */}
           <div className="w-full lg:w-[45%] flex flex-col items-center lg:mt-12 lg:items-end space-y-6 px-4 lg:pr-12 mb-8 lg:mb-0">
             <motion.button
+              onClick={scrollToPrincipal}
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -59,6 +75,7 @@ const page = () => {
             </motion.button>
   
             <motion.button
+              onClick={scrollToTeam}
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -72,12 +89,17 @@ const page = () => {
       </div>
 
       <div>
-        <WelcomeSection/>
-        <FoundingFathersSection/>
-        <FirstPrincipalSection/>
-        <StaffSection/>
-        <StaffSection2/>
-        <NonTeachingStaff/>
+        <WelcomeSection />
+        <FoundingFathersSection />
+        
+        {/* Wrap FirstPrincipalSection with forwardRef and assign ref */}
+        <FirstPrincipalSection ref={principalRef} />
+
+        {/* Wrap StaffSection with forwardRef and assign ref */}
+        <StaffSection ref={teamRef} />
+        
+        <StaffSection2 />
+        <NonTeachingStaff />
 
         {/* Full-Width Image with Animation */}
         <motion.img
@@ -90,10 +112,10 @@ const page = () => {
         />
       </div>
 
-      <Possibilities/>
-      <CommunitySection/>
+      <Possibilities />
+      <CommunitySection />
     </>
-  )
+  );
 };
 
-export default page;
+export default Page;

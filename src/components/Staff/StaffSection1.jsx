@@ -1,8 +1,9 @@
 'use client'
-import React from 'react';
+import React, { forwardRef } from 'react';
+
 import { motion } from 'framer-motion';
 
-const StaffProfileSection = () => {
+const StaffSection = forwardRef((props, ref) => {
   const profiles = [
     {
       id: 1,
@@ -21,7 +22,8 @@ const StaffProfileSection = () => {
   ];
 
   return (
-    <div 
+    <section ref={ref} className="staff-section min-h-screen">
+       <div 
       className="relative w-full h-full py-16" // Ensures full background coverage
       style={{
         backgroundImage: "url('https://res.cloudinary.com/diowslfww/image/upload/v1730611515/lxhilihugq6gezsik2di.png')",
@@ -86,7 +88,10 @@ const StaffProfileSection = () => {
         </div>
       </div>
     </div>
-  );
-};
 
-export default StaffProfileSection;
+    </section>
+   
+  );
+});
+
+export default StaffSection;

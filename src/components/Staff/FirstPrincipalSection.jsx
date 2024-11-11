@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
+
 import { motion } from 'framer-motion';
 
-const FirstPrincipalSection = () => {
+const FirstPrincipalSection = forwardRef((props, ref) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -26,7 +27,8 @@ const FirstPrincipalSection = () => {
   };
 
   return (
-    <div className="w-full bg-[#FEF4EA]">
+    <section ref={ref} className="first-principal-section min-h-screen">
+           <div className="w-full bg-[#FEF4EA]">
       <motion.div 
         className="max-w-7xl mx-auto px-4"
         variants={containerVariants}
@@ -68,7 +70,9 @@ const FirstPrincipalSection = () => {
         </motion.div>
       </motion.div>
     </div>
+    </section>
+   
   );
-};
+});
 
 export default FirstPrincipalSection;
