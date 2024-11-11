@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Possibilities = () => {
@@ -15,16 +16,14 @@ const Possibilities = () => {
             their own paths.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button 
-              className="bg-[#FDB813] hover:bg-[#fdc443] text-black font-medium px-8 py-3 rounded-full transition-all duration-300 text-sm"
-            >
-              Discover More
-            </button>
+            <Link href='/contact'>
             <button 
               className="border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-full transition-all duration-300 text-sm font-medium"
             >
               Get in Touch
             </button>
+            </Link>
+           
           </div>
         </div>
       </div>
