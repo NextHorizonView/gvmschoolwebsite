@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Phone, Globe, Building2 } from 'lucide-react';
+import Link from 'next/link'; // Import Link from next/link
 
 const ConnectWithUsSection = () => {
     const textVariants = {
@@ -24,28 +25,32 @@ const ConnectWithUsSection = () => {
             title: "Faculty",
             description: "Contact and meet our faculty to know more about us",
             buttonText: "Plan a Visit",
-            bgColor: "bg-[#E2C1A5]"
+            bgColor: "bg-[#E2C1A5]",
+            link: "/Staff" // Link to Faculty page
         },
         {
             icon: <Phone className="w-12 h-12 text-white" />,
             title: "Contact Information",
             description: "Get in touch with our dedicated admissions team to learn more about our programs and explore your options",
             buttonText: "Reach Out",
-            bgColor: "bg-[#18413F]"
+            bgColor: "bg-[#18413F]",
+            link: "/contact" // Link to Contact page
         },
         {
             icon: <Globe className="w-12 h-12 text-white" />,
             title: "Stay Connected",
             description: "Follow us on social media to stay up-to-date with the latest news and events",
             buttonText: "Join Our Community",
-            bgColor: "bg-[#19413F]"
+            bgColor: "bg-[#19413F]",
+            link: "/contact" // Link to Social Media page
         },
         {
             icon: <Building2 className="w-12 h-12 text-[#18413F]" />,
             title: "Partners and Affiliations",
             description: "Explore our collaborations with industry leaders and renowned institutions",
             buttonText: "Learn More",
-            bgColor: "bg-[#E2C1A5]"
+            bgColor: "bg-[#E2C1A5]",
+            link: "/Staff" // Link to Partners page
         }
     ];
 
@@ -95,7 +100,9 @@ const ConnectWithUsSection = () => {
                             <p className={`mb-8 flex-grow ${card.bgColor === 'bg-[#E2C1A5]' ? 'text-[#18413F]' : 'text-white'}`}>
                                 {card.description}
                             </p>
-                            <button 
+                            {/* Apply className directly on Link */}
+                            <Link
+                                href={card.link}
                                 className={`px-6 py-2 rounded-[53px] transition-colors ${
                                     card.bgColor === 'bg-[#E2C1A5]' 
                                         ? 'bg-[#18413F] text-[#E2C1A5] hover:bg-opacity-90' 
@@ -103,7 +110,7 @@ const ConnectWithUsSection = () => {
                                 }`}
                             >
                                 {card.buttonText}
-                            </button>
+                            </Link>
                         </motion.div>
                     ))}
                 </div>

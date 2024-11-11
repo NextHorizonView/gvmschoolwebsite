@@ -2,6 +2,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link'; // Corrected import for Next.js Link
 
 export default function UnlockingTheFuture() {
   return (
@@ -36,15 +37,7 @@ export default function UnlockingTheFuture() {
         personal growth, and the development of essential skills for the 21st century.
       </motion.p>
       
-      {/* Button */}
-      <motion.button
-        className="bg-[#143B3C] text-white py-2 px-8 rounded-md border border-white/60 text-lg font-semibold shadow-lg hover:bg-[#172448]"
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.6, duration: 0.6 }}
-      >
-        KNOW MORE
-      </motion.button>
+      
     </motion.div>
   );
 }

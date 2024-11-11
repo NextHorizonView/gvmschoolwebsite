@@ -52,7 +52,7 @@ const CommunitySection = () => {
   };
 
   return (
-    <section className="min-h-screen bg-[#F5E6D3]">
+    <section id='cultural-activities' className="min-h-screen bg-[#F5E6D3]">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -71,14 +71,13 @@ const CommunitySection = () => {
                 <motion.div
                   key={tab}
                   onClick={() => handleTabClick(tab)}
-                  className={`cursor-pointer w-full flex items-center justify-between p-4 border-b border-[#18413F] ${selected === tab ? 'bg-[#18413F] text-white' : 'text-[#18413F]'
+                  className={`cursor-pointer w-full flex items-center justify-between p-4 border-b border-[#18413F] ${selected === tab ? 'bg-[#18413F] text-white' : 'text-[#18413F]'}
                     }`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <span
                     className="text-xl"
-                    onClick={() => handleTabClick(tab)} // Ensure clicking the text also triggers the slide
                   >
                     {content[tab].title}
                   </span>
@@ -111,13 +110,6 @@ const CommunitySection = () => {
                 <p className="text-[#18413F] text-lg leading-relaxed">
                   {content[selected].description}
                 </p>
-                <motion.button
-                  className="px-6 py-3 bg-[#18413F] text-white rounded-sm"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  OUR FACILITIES
-                </motion.button>
               </motion.div>
             </AnimatePresence>
           </div>

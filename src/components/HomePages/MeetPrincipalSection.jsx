@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
 const MeetPrincipalSection = () => {
     const textVariants = {
@@ -13,10 +14,26 @@ const MeetPrincipalSection = () => {
         visible: { opacity: 1, transition: { duration: 0.5, staggerChildren: 0.3 } }
     };
 
-    const linkVariants = {
-        hidden: { opacity: 0, x: -20 },
-        visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } }
-    };
+    // Custom Link Component
+    const AnimatedLink = ({ href, text }) => (
+        <Link href={href}>
+            <motion.div
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full cursor-pointer border-y border-[#18413F] py-4 hover:bg-[#18413F]/5 transition-all duration-300"
+            >
+                <div className="flex items-center justify-between px-4">
+                    <span className="text-[#18413F] text-lg font-medium">
+                        {text}
+                    </span>
+                    <ChevronRight 
+                        className="text-[#18413F] transform group-hover:translate-x-1 transition-transform" 
+                        size={24} 
+                    />
+                </div>
+            </motion.div>
+        </Link>
+    );
 
     return (
         <motion.section
@@ -28,7 +45,6 @@ const MeetPrincipalSection = () => {
         >
             <div className="max-w-7xl mx-auto px-4 md:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    
                     {/* Image Column */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -71,41 +87,20 @@ const MeetPrincipalSection = () => {
 
                         <motion.div
                             className="flex flex-col space-y-4 pt-6"
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
+                            variants={containerVariants}
                         >
-                            {/* Meet Our Principal Link */}
-                            <motion.div
-                                className="group cursor-pointer"
-                                variants={linkVariants}
-                            >
-                                <div className="flex items-center justify-between py-4 border-t border-b border-[#18413F]">
-                                    <span className="text-[#18413F] text-lg font-medium">
-                                        Meet Our Principal
-                                    </span>
-                                    <ChevronRight 
-                                        className="text-[#18413F] transform group-hover:translate-x-1 transition-transform" 
-                                        size={24} 
-                                    />
-                                </div>
-                            </motion.div>
-
-                            {/* Meet Our Team Link */}
-                            <motion.div
-                                className="group cursor-pointer"
-                                variants={linkVariants}
-                            >
-                                <div className="flex items-center justify-between py-4 border-t border-b border-[#18413F]">
-                                    <span className="text-[#18413F] text-lg font-medium">
-                                        Meet Our Team
-                                    </span>
-                                    <ChevronRight 
-                                        className="text-[#18413F] transform group-hover:translate-x-1 transition-transform" 
-                                        size={24} 
-                                    />
-                                </div>
-                            </motion.div>
+                            {/* Links Section */}
+                            <div className="space-y-4">
+                                <AnimatedLink 
+                                    href="/Admissions"
+                                    text="Meet Our Principal"
+                                />
+                                
+                                <AnimatedLink 
+                                    href="/Admissions"
+                                    text="Meet Our Staff"
+                                />
+                            </div>
                         </motion.div>
                     </motion.div>
                 </div>

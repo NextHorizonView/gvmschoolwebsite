@@ -16,7 +16,7 @@ const Page = () => {
         <div
           className="absolute h-[100vh] w-full bg-cover  bg-center"
           style={{
-            backgroundImage: "url('https://res.cloudinary.com/diowslfww/image/upload/v1730611515/lxhilihugq6gezsik2di.png')",
+            backgroundImage: "url('https://res.cloudinary.com/diowslfww/image/upload/v1730548984/mbfasiufmgutamgbixxv.png')",
             opacity: 1,
             backgroundSize: 'cover', // Ensures the image covers the area
             backgroundPosition: 'center', // Ensures the image is centered
