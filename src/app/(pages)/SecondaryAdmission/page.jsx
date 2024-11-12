@@ -37,10 +37,10 @@ const Page = () => {
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Secondary Education
               </h1>
-              <p className="text-lg md:text-xl text-gray-700 italic mb-4">
+              <p className="text-lg md:text-xl text-black italic mb-4">
                 Collaborative, challenging and enjoyable learning experiences.
               </p>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-800 font-semibold leading-relaxed">
               At our school, Secondary Education is all about nurturing young minds and laying a strong foundation for lifelong learning. In these formative years, we focus on developing key skills in literacy, numeracy, critical thinking, and creativity. Our engaging, hands-on curriculum is designed to spark curiosity andAt our school, Primary Education is all about nurturing young minds and laying a strong foundation for lifelong learning. In these formative years, we focus on developing key skills in literacy, numeracy, critical thinking, and creativity.
               </p>
             </motion.div>

@@ -94,7 +94,7 @@ const ContactSection = () => {
                   name="EnquiryFirstName"
                   value={formData.EnquiryFirstName}
                   onChange={handleChange}
-                  className="w-full p-3 bg-white/10 border border-white/20 rounded-xl text-black text-sm focus:outline-none focus:border-white/40 transition-colors"
+                  className="w-full p-3 bg-white/10 border border-white/20 rounded-xl placeholder-black text-black text-sm focus:outline-none focus:border-white/40 transition-colors"
                 />
               </div>
               <div>
@@ -104,7 +104,7 @@ const ContactSection = () => {
                   value={formData.EnquiryPhoneNumber}
                   onChange={handleChange}
                   placeholder="PHONE NUMBER"
-                  className="w-full p-3 bg-white/10 border border-white/20 rounded-xl text-black text-sm focus:outline-none focus:border-white/40 transition"
+                  className="w-full p-3 bg-white/10 border border-white/20 rounded-xl placeholder-black text-black text-sm focus:outline-none focus:border-white/40 transition"
                 />
               </div>
               <button
