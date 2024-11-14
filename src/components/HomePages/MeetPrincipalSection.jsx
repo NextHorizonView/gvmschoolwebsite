@@ -89,12 +89,12 @@ const MeetPrincipalSection = () => {
                             {/* Links Section */}
                             <div className="space-y-4">
                                 <AnimatedLink 
-                                    href="/Admissions"
+                                    href="/Staff"
                                     text="Meet Our Principal"
                                 />
                                 
                                 <AnimatedLink 
-                                    href="/Admissions"
+                                    href="/Staff"
                                     text="Meet Our Staff"
                                 />
                             </div>

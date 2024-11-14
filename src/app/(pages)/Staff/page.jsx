@@ -83,7 +83,7 @@ const Page = () => {
               className="group bg-[#18413F] text-white px-8 lg:px-10 py-4 rounded-md w-full max-w-[320px] flex justify-center text-lg font-medium hover:bg-teal-700 transition-all relative"
             >
               <span className="absolute inset-[2px] rounded-md border border-white/60 group-hover:border-white/40 transition-colors"></span>
-              <span className="relative">MEET OUR TEAM</span>
+              <span className="relative">MEET OUR STAFF</span>
             </motion.button>
           </div>
         </div>
@@ -91,11 +91,11 @@ const Page = () => {
 
       <div>
         <WelcomeSection />
-        <MeetPrincipalStaff/>
+        <MeetPrincipalStaff  ref={principalRef} />
         <FoundingFathersSection />
         
         {/* Wrap FirstPrincipalSection with forwardRef and assign ref */}
-        <FirstPrincipalSection ref={principalRef} />
+        <FirstPrincipalSection />
 
         {/* Wrap StaffSection with forwardRef and assign ref */}
         <StaffSection ref={teamRef} />
