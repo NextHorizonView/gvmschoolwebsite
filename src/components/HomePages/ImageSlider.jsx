@@ -83,12 +83,12 @@ const ImageSlider = () => {
           variants={textVariants}
         >
           <div className="space-y-4 sm:space-y-6">
-            <motion.h2 
+            {/* <motion.h2 
               className="text-4xl sm:text-6xl md:text-7xl lg:text-6xl font-bold text-white leading-tight"
               variants={textVariants}
             >
               The Power of Education:
-            </motion.h2>
+            </motion.h2> */}
             <motion.h2 
               className="text-4xl sm:text-6xl md:text-7xl lg:text-6xl font-bold text-white leading-tight"
               variants={textVariants}

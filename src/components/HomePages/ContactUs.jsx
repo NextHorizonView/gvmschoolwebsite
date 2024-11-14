@@ -59,6 +59,7 @@ const ContactSection = () => {
       variants={containerVariants}
     >
       {/* Background Image */}
+      <div className="absolute inset-0 bg-black/20 z-10"></div>
       <div 
         className="absolute inset-0 z-0 "
         style={{

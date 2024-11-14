@@ -8,14 +8,14 @@ const StaffSection2 = () => {
       id: 1,
       name: "Mr.Dhanbeer Singh",
       position: "Senior Clerk ",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      description: "Mr. Dhanbeer Singh is a dedicated professional who ensures the smooth and efficient handling of administrative responsibilities. With attention to detail and a proactive approach, he manages essential records and processes, supporting staff and students alike. His commitment plays a vital role in maintaining the school’s operational excellence.",
       imageUrl: "https://res.cloudinary.com/diowslfww/image/upload/v1730809305/cmvtfu1km558cjgkw7ik.png"
     },
     {
       id: 2,
       name: "Mr. Shivraj Vishwakarma",
       position: "Clerk",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      description: "Mr. Shivraj Vishwakarma is a dedicated professional who efficiently manages administrative tasks. With a keen attention to detail, he ensures smooth operations and supports the team in maintaining organizational excellence.",
       imageUrl: "https://res.cloudinary.com/diowslfww/image/upload/v1730809305/ttg3trwodyixlz7otrtr.png"
     }
   ];

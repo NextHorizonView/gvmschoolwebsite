@@ -6,6 +6,7 @@ import Link from 'next/link';
 const SecondaryAdmissionSection = () => {
   return (
     <div className="relative w-full min-h-screen">
+        <div className="absolute inset-0 bg-black/10 z-10"></div>
       {/* Secondary Education Section */}
       <div
         className="relative h-[100vh] w-full bg-cover bg-center"

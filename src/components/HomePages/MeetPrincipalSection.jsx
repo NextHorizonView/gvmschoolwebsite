@@ -79,10 +79,7 @@ const MeetPrincipalSection = () => {
                             variants={textVariants}
                             className="text-[#18413F] text-lg md:text-xl leading-relaxed"
                         >
-                            As an educator and leader for over 35 years, and a father for almost as long, 
-                            I understand there are few decisions in life as important as the choice of 
-                            school for your child. We want them to grow up to be healthy, capable adults; 
-                            adaptable, resilient and prepared for life beyond school.
+                           As a dedicated educator with over 25 years of experience and a parent myself, I deeply understand the significance of selecting the right school for your child. It’s a decision that shapes their future, fostering not just academic growth but also life skills that will serve them well beyond the classroom. We all desire a nurturing environment where our children can thrive into healthy, capable adults, equipped with resilience, adaptability, and readiness for the world ahead.
                         </motion.p>
 
                         <motion.div

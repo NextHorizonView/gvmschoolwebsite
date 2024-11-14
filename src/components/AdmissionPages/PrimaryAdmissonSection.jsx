@@ -7,6 +7,7 @@ const PrimaryAdmissionSection = () => {
   return (
     <div className="relative w-full min-h-screen">
       {/* Primary Education Section */}
+      <div className="absolute inset-0 bg-black/10 z-10"></div>
       <div
         className="relative h-[100vh] w-full bg-cover bg-center"
         style={{ backgroundImage: "url('https://res.cloudinary.com/diowslfww/image/upload/v1730611515/lxhilihugq6gezsik2di.png')" }}

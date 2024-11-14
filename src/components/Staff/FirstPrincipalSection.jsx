@@ -47,7 +47,7 @@ const FirstPrincipalSection = forwardRef((props, ref) => {
               Principal
             </h2>
             <p className="text-gray-700 leading-relaxed text-lg">
-            As an educator and leader for over 35 years, and a father for almost as long, I understand there are few decisions in life as important as the choice of school for your child. We want them to grow up to be healthy, capable adults; adaptable, resilient and prepared for life beyond school.
+            With a journey spanning over three decades in education and leadership—and a lifetime commitment as a parent—I know that selecting the right school for your child is a deeply impactful choice. Our goal here is to foster a nurturing environment where each student develops into a well-rounded, resilient individual, ready for the challenges and opportunities beyond the classroom. We aim to empower students, encouraging their growth into adaptable, capable young adults who will contribute meaningfully to the world around them.
             </p>
           </div>
 

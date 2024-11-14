@@ -13,6 +13,8 @@ const Page = () => {
         transition={{ duration: 1 }}
         className="relative h-[100vh] w-full"
       >
+       <div className="absolute inset-0 bg-black/15 z-10"></div>
+
         <div
           className="absolute h-[100vh] w-full bg-cover bg-center"
           style={{

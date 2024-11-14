@@ -104,7 +104,7 @@ const NonTeachingStaff = () => {
         >
           <div className="rounded-lg p-8">
             <p className="text-gray-700 text-lg leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
+            Non-teaching staff plays a crucial role in ensuring the smooth and effective functioning of educational institutions. Their responsibilities, though behind the scenes, are vital for maintaining a conducive learning environment. From administrative duties to managing facilities, non-teaching staff members support teachers, students, and the overall operations of the institution. Their dedication and hard work contribute significantly to the institution’s success, providing essential services that allow the educational process to thrive.
             </p>
           </div>
         </motion.div>
