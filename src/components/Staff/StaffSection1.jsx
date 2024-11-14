@@ -7,15 +7,15 @@ const StaffSection = forwardRef((props, ref) => {
   const profiles = [
     {
       id: 1,
-      name: "Dr. Smith",
-      position: "Senior Position",
+      name: "Mr. Maniram Yadav",
+      position: "HM Primary Section",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
       imageUrl: "https://res.cloudinary.com/diowslfww/image/upload/v1730807578/fulrajhyuzr6ldlcodb8.png"
     },
     {
       id: 2,
-      name: "Dr. Johnson",
-      position: "Department Head",
+      name: "Mr. Rakesh Singh Sir",
+      position: "Supervisor Secondary Section",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
       imageUrl: "https://res.cloudinary.com/diowslfww/image/upload/v1730807579/owm8g9xf1gtpzyaruzbf.png"
     }

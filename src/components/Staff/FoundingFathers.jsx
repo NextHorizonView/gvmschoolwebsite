@@ -2,13 +2,33 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const FoundingFathersSection = () => {
+  const currentPrincipalsImages = [
+    "https://res.cloudinary.com/diowslfww/image/upload/v1730805569/iefl95nt9szfhd4lybau.png",
+    "https://res.cloudinary.com/diowslfww/image/upload/v1730805569/hai2x6ypbuisbwcsgbe4.png",
+    "https://res.cloudinary.com/diowslfww/image/upload/v1730805569/ygf8igfexhatozi6zn1c.png",
+  ];
 
-    const currentPrincipalsImages = [
-        "https://res.cloudinary.com/diowslfww/image/upload/v1730805569/iefl95nt9szfhd4lybau.png",
-        "https://res.cloudinary.com/diowslfww/image/upload/v1730805569/hai2x6ypbuisbwcsgbe4.png",
-        "https://res.cloudinary.com/diowslfww/image/upload/v1730805569/ygf8igfexhatozi6zn1c.png"
-      ];
+  const currentPrincipalsNames = [
+    "Mrs. Seema Singh",
+    "Mrs. Sheela Singh",
+    "Mrs. Rita Singh",
+  ];
+  
+  const currentPrincipalsRoles = [
+    "Secretary",
+    "Deputy Secretary",
+    "Treasurer",
+  ];
 
+  const foundationPrincipalsImages = [
+    "https://res.cloudinary.com/diowslfww/image/upload/v1730805569/beuj83t924q6cz1300td.png",
+    "https://res.cloudinary.com/diowslfww/image/upload/v1730805569/rczyd1r16iawr5xno3pg.png",
+  ];
+
+  const foundationPrincipalsNames = [
+    "The Late Mr. Ram Sevak Singh ",
+    "The Late  Mrs. Gulaabi Ramsevak Singh "
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -16,8 +36,8 @@ const FoundingFathersSection = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.3,
-      }
-    }
+      },
+    },
   };
 
   const headerVariants = {
@@ -27,9 +47,9 @@ const FoundingFathersSection = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   const cardVariants = {
@@ -39,14 +59,14 @@ const FoundingFathersSection = () => {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
     <div className="w-full bg-white py-12">
-      <motion.div 
+      <motion.div
         className="max-w-7xl mx-auto w-full text-center px-4"
         variants={containerVariants}
         initial="hidden"
@@ -60,9 +80,10 @@ const FoundingFathersSection = () => {
         </motion.div>
 
         {/* Founding Fathers Section */}
+        {/* Founding Fathers Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {[1, 2].map((index) => (
-            <motion.div 
+          {foundationPrincipalsImages.map((image, index) => (
+            <motion.div
               key={index}
               className="flex flex-col items-center"
               variants={cardVariants}
@@ -73,17 +94,19 @@ const FoundingFathersSection = () => {
                 transition={{ duration: 0.2 }}
               >
                 <img
-  src={
-    index === 1
-      ? "https://res.cloudinary.com/diowslfww/image/upload/v1730805569/beuj83t924q6cz1300td.png"
-      : "https://res.cloudinary.com/diowslfww/image/upload/v1730805569/rczyd1r16iawr5xno3pg.png"
-  }
-  alt={`Foundation Principal ${index}`}
-  className="rounded-lg object-cover w-full h-full"
-/>
-                <div className="absolute inset-0 border-4  rounded-lg transform"></div>
+                  src={image}
+                  alt={foundationPrincipalsNames[index]}
+                  className="rounded-lg object-cover w-full h-full"
+                />
+                <div className="absolute inset-0 border-4 rounded-lg transform"></div>
               </motion.div>
-              <h3 className="text-lg font-semibold text-gray-700">Foundation Principal</h3>
+              <h3 className="text-lg font-semibold text-gray-700 text-center">
+                {/* Name on the first line */}
+                <span>{foundationPrincipalsNames[index]}</span>
+                <br />
+                {/* Static "Foundation Principal" on the second line */}
+                <span>Foundation Principal</span>
+              </h3>
             </motion.div>
           ))}
         </div>
@@ -95,9 +118,10 @@ const FoundingFathersSection = () => {
         </motion.div>
 
         {/* Current Principals Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-  {[1, 2, 3].map((index) => (
-    <motion.div 
+        {/* Current Principals Section */}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+  {currentPrincipalsImages.map((image, index) => (
+    <motion.div
       key={index}
       className="flex flex-col items-center"
       variants={cardVariants}
@@ -110,12 +134,18 @@ const FoundingFathersSection = () => {
         transition={{ duration: 0.2 }}
       >
         <img
-          src={currentPrincipalsImages[index - 1]} // Access each URL by index
-          alt={`Foundation Principal ${index}`}
+          src={image}
+          alt={currentPrincipalsNames[index]}
           className="rounded-lg object-cover w-full h-full border-4"
         />
       </motion.div>
-      <h3 className="text-lg font-semibold text-gray-700">Foundation Principal</h3>
+      <h3 className="text-lg font-semibold text-gray-700 text-center">
+        {/* Name on the first line */}
+        <span>{currentPrincipalsNames[index]}</span>
+        <br />
+        {/* Role on the second line */}
+        <span>{currentPrincipalsRoles[index]}</span>
+      </h3>
     </motion.div>
   ))}
 </div>

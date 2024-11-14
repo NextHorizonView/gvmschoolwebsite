@@ -9,6 +9,7 @@ import StaffSection2 from '@/components/Staff/StaffSection2';
 import NonTeachingStaff from '@/components/Staff/NonTeachingStaff';
 import Possibilities from '@/components/Staff/MeetThePossibilites';
 import CommunitySection from '@/components/HomePages/Community';
+import MeetPrincipalStaff from '@/components/HomePages/MeetThePrincipalStaff';
 
 const Page = () => {
   const principalRef = useRef(null);
@@ -90,6 +91,7 @@ const Page = () => {
 
       <div>
         <WelcomeSection />
+        <MeetPrincipalStaff/>
         <FoundingFathersSection />
         
         {/* Wrap FirstPrincipalSection with forwardRef and assign ref */}

@@ -82,7 +82,7 @@ const PrimaryEnquiryForm = () => {
         </motion.div>
 
         <motion.div
-          className="bg-[#143B3C] p-8 md:p-12 rounded-lg"
+          className="bg-[#FEF4EA] p-8 md:p-12 rounded-lg"
           variants={contentVariants}
         >
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -93,7 +93,7 @@ const PrimaryEnquiryForm = () => {
                 name="EnquiryLastName"
                 value={formData.EnquiryLastName}
                 onChange={handleChange}
-                className="w-full p-2.5 bg-transparent border border-gray-600 rounded-md text-white placeholder-gray-400 text-sm focus:outline-none focus:border-gray-400"
+                className="w-full p-2.5 bg-transparent border border-black rounded-md text-black placeholder-gray-400 text-sm focus:outline-none focus:border-black"
               />
               <input
                 type="text"
@@ -101,7 +101,7 @@ const PrimaryEnquiryForm = () => {
                 value={formData.EnquiryFirstName}
                 onChange={handleChange}
                 placeholder="First Name"
-                className="w-full p-2.5 bg-transparent border border-gray-600 rounded-md text-white placeholder-gray-400 text-sm focus:outline-none focus:border-gray-400"
+                className="w-full p-2.5 bg-transparent border border-black rounded-md text-black placeholder-gray-400 text-sm focus:outline-none focus:border-black"
               />
             </div>
             
@@ -111,7 +111,7 @@ const PrimaryEnquiryForm = () => {
               value={formData.EnquiryEmail}
               onChange={handleChange}
               placeholder="Email"
-              className="w-full p-2.5 bg-transparent border border-gray-600 rounded-md text-white placeholder-gray-400 text-sm focus:outline-none focus:border-gray-400"
+              className="w-full p-2.5 bg-transparent border border-black rounded-md text-black placeholder-gray-400 text-sm focus:outline-none focus:border-black"
             />
             
             <input
@@ -120,7 +120,7 @@ const PrimaryEnquiryForm = () => {
               value={formData.EnquiryPhoneNumber}
               onChange={handleChange}
               placeholder="Phone Number"
-              className="w-full p-2.5 bg-transparent border border-gray-600 rounded-md text-white placeholder-gray-400 text-sm focus:outline-none focus:border-gray-400"
+              className="w-full p-2.5 bg-transparent border border-black rounded-md text-black placeholder-gray-400 text-sm focus:outline-none focus:border-black"
             />
             
             <textarea
@@ -129,12 +129,12 @@ const PrimaryEnquiryForm = () => {
              onChange={handleChange}
               placeholder="Message"
               rows={4}
-              className="w-full p-2.5 bg-transparent border border-gray-600 rounded-md text-white placeholder-gray-400 text-sm focus:outline-none focus:border-gray-400 resize-none"
+              className="w-full p-2.5 bg-transparent border border-black rounded-md text-black placeholder-gray-400 text-sm focus:outline-none focus:border-black resize-none"
             />
             
             <button
               type="submit"
-              className="w-full p-2.5 bg-transparent border border-gray-600 rounded-md text-white text-sm hover:bg-gray-800 transition-colors"
+              className="w-full p-2.5 bg-[#18413F] border border-black rounded-md text-white text-sm hover:bg-gray-800 transition-colors"
             >
               Submit Enquiry
             </button>

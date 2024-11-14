@@ -6,15 +6,15 @@ const StaffSection2 = () => {
   const profiles = [
     {
       id: 1,
-      name: "Dr. Smith",
-      position: "Senior Position",
+      name: "Mr.Dhanbeer Singh",
+      position: "Senior Clerk ",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
       imageUrl: "https://res.cloudinary.com/diowslfww/image/upload/v1730809305/cmvtfu1km558cjgkw7ik.png"
     },
     {
       id: 2,
-      name: "Dr. Johnson",
-      position: "Department Head",
+      name: "Mr. Shivraj Vishwakarma",
+      position: "Clerk",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
       imageUrl: "https://res.cloudinary.com/diowslfww/image/upload/v1730809305/ttg3trwodyixlz7otrtr.png"
     }
