@@ -14,6 +14,7 @@ import MeetPrincipalStaff from '@/components/HomePages/MeetThePrincipalStaff';
 const Page = () => {
   const principalRef = useRef(null);
   const teamRef = useRef(null);
+  const trusteeRef = useRef(null);
 
   const scrollToPrincipal = () => {
     if (principalRef.current) {
@@ -24,6 +25,11 @@ const Page = () => {
   const scrollToTeam = () => {
     if (teamRef.current) {
       teamRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+  const scrollToTrustee = () => {
+    if (trusteeRef.current) {
+      trusteeRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -60,6 +66,7 @@ const Page = () => {
             >
               MEET THE<br /> STAFF
             </motion.h1>
+            
           </div>
   
           {/* Right Side - Section Buttons */}
@@ -85,6 +92,16 @@ const Page = () => {
               <span className="absolute inset-[2px] rounded-md border border-white/60 group-hover:border-white/40 transition-colors"></span>
               <span className="relative">MEET OUR STAFF</span>
             </motion.button>
+            <motion.button
+              onClick={scrollToTrustee}
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="group bg-[#18413F] text-white px-8 lg:px-10 py-4 rounded-md w-full max-w-[320px] flex justify-center text-lg font-medium hover:bg-teal-700 transition-all relative"
+            >
+              <span className="absolute inset-[2px] rounded-md border border-white/60 group-hover:border-white/40 transition-colors"></span>
+              <span className="relative">MEET OUR TRUSTEES</span>
+            </motion.button>
           </div>
         </div>
       </div>
@@ -92,8 +109,7 @@ const Page = () => {
       <div>
         <WelcomeSection />
         <MeetPrincipalStaff  ref={principalRef} />
-        <FoundingFathersSection />
-        
+        <FoundingFathersSection ref={trusteeRef} />
         {/* Wrap FirstPrincipalSection with forwardRef and assign ref */}
         <FirstPrincipalSection />
 

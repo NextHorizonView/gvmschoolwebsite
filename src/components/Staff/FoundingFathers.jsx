@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { motion } from 'framer-motion';
 
-const FoundingFathersSection = () => {
+const FoundingFathersSection = forwardRef((props,ref) => {
   const currentPrincipalsImages = [
     "https://res.cloudinary.com/diowslfww/image/upload/v1730805569/iefl95nt9szfhd4lybau.png",
     "https://res.cloudinary.com/diowslfww/image/upload/v1730805569/hai2x6ypbuisbwcsgbe4.png",
@@ -65,6 +65,7 @@ const FoundingFathersSection = () => {
   };
 
   return (
+    <section ref={ref}>
     <div className="w-full bg-white py-12">
       <motion.div
         className="max-w-7xl mx-auto w-full text-center px-4"
@@ -151,7 +152,8 @@ const FoundingFathersSection = () => {
 </div>
       </motion.div>
     </div>
+    </section>
   );
-};
+});
 
 export default FoundingFathersSection;

@@ -9,14 +9,14 @@ const StaffSection = forwardRef((props, ref) => {
       id: 1,
       name: "Mr. Maniram Yadav",
       position: "HM Primary Section",
-      description: "Mr.Maniram Yadav is dedicated to building a strong foundation for our youngest learners. With a focus on nurturing curiosity and resilience, he ensures each child feels supported and inspired, helping them grow academically and personally in a caring environment.",
+      description: "Mr. Maniram Yadav is dedicated to building a strong foundation for our youngest learners. With a focus on nurturing curiosity and resilience, he ensures each child feels supported and inspired, helping them grow academically and personally in a caring environment.",
       imageUrl: "https://res.cloudinary.com/diowslfww/image/upload/v1730807578/fulrajhyuzr6ldlcodb8.png"
     },
     {
       id: 2,
       name: "Mr. Rakesh Singh Sir",
       position: "Supervisor Secondary Section",
-      description: "With a commitment to guiding students through their crucial secondary years, Mr. Singh brings both expertise and empathy to his role. He focuses on fostering critical thinking, discipline, and adaptability, preparing students to excel academically and become confident, well-rounded individuals.",
+      description: "With a commitment to guiding students through their crucial secondary years, Mr. Rakesh Singh brings both expertise and empathy to his role. He focuses on fostering critical thinking, discipline, and adaptability, preparing students to excel academically and become confident, well-rounded individuals.",
       imageUrl: "https://res.cloudinary.com/diowslfww/image/upload/v1730807579/owm8g9xf1gtpzyaruzbf.png"
     }
   ];

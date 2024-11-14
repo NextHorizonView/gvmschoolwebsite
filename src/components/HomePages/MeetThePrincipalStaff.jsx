@@ -80,7 +80,7 @@ const MeetPrincipalStaff = forwardRef((prop,ref) => {
                             variants={textVariants}
                             className="text-[#18413F] text-lg md:text-xl leading-relaxed"
                         >
-                            As a dedicated educator with over 25 years of experience and a parent myself, I deeply understand the significance of selecting the right school for your child. It’s a decision that shapes their future, fostering not just academic growth but also life skills that will serve them well beyond the classroom. We all desire a nurturing environment where our children can thrive into healthy, capable adults, equipped with resilience, adaptability, and readiness for the world ahead.
+                            Mr. Sanjay Singh Sir, Principal of GVM High School, leads with great dedication and care. His focus on improving education, embracing technology, and supporting both students and staff has helped the school grow and succeed. Under his leadership, GVM continues to be a place where everyone feels motivated to achieve their best.
                         </motion.p>
 
                         <motion.div

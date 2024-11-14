@@ -47,7 +47,7 @@ const FirstPrincipalSection = forwardRef((props, ref) => {
               Principal
             </h2>
             <p className="text-gray-700 leading-relaxed text-lg">
-            With a journey spanning over three decades in education and leadership—and a lifetime commitment as a parent—I know that selecting the right school for your child is a deeply impactful choice. Our goal here is to foster a nurturing environment where each student develops into a well-rounded, resilient individual, ready for the challenges and opportunities beyond the classroom. We aim to empower students, encouraging their growth into adaptable, capable young adults who will contribute meaningfully to the world around them.
+            Mr. Radheshyam Singh Sir, the first Principal of GVM High School, played a crucial role in building our school from the ground up. His dedication, simplicity, and genuine love for education created the guiding path we still follow today. From the start, his vision shaped GVM into a place where students and staff feel supported and inspired, and his values continue to be the heart of our school’s growth and success. 
             </p>
           </div>
 
