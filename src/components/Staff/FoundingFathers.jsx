@@ -76,8 +76,7 @@ const FoundingFathersSection = forwardRef((props,ref) => {
       >
         <motion.div variants={headerVariants}>
           <h2 className="text-4xl font-bold text-[#1a237e] mb-8">
-          GYANODAYA VIDYALAYA TRUST ( Registered vide E4753)
-        Conducted GYANODAYA VIDYA MANDIR HIGH SCHOOL
+          Meet Our Founding Fathers
           </h2>
         </motion.div>
 

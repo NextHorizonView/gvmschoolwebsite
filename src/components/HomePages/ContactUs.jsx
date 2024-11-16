@@ -101,7 +101,7 @@ const ContactSection = () => {
               <div>
                 <input
                   type="tel"
-                  name="EnquiryPhoneNumber"
+                name="EnquiryPhoneNumber"
                   value={formData.EnquiryPhoneNumber}
                   onChange={handleChange}
                   placeholder="PHONE NUMBER"
@@ -127,17 +127,17 @@ const ContactSection = () => {
             <div className="space-y-8">
               <div className="group">
                 <h3 className="text-black text-sm mb-2">Phone number</h3>
-                <p className="text-black text-sm font-medium">+1 (999) 999-99-99</p>
+                <p className="text-black text-sm font-medium">9136061594</p>
               </div>
               
               <div className="group">
                 <h3 className="text-black text-sm mb-2">Gmail</h3>
-                <p className="text-black text-sm font-medium">Gyanodayavidyamandir.com</p>
+                <p className="text-black text-sm font-medium">gvmschoolmalad@gmail.com</p>
               </div>
               
               <div className="group">
                 <h3 className="text-black text-sm mb-2">Address</h3>
-                <p className="text-black text-sm font-medium">Vile Parle, Mumbai, Maharashtra, India</p>
+                <p className="text-black text-sm font-medium">Dattwadi Kurar Village, Malad East Mumbai</p>
               </div>
             </div>
           </motion.div>

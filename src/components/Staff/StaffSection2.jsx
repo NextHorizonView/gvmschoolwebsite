@@ -6,9 +6,9 @@ const StaffSection2 = () => {
   const profiles = [
     {
       id: 1,
-      name: "Mr.Dhanbeer Singh",
+      name: "Mr. Dhabir Shivsevak Singh",
       position: "Senior Clerk ",
-      description: "Mr. Dhanbeer Singh is a dedicated professional who ensures the smooth and efficient handling of administrative responsibilities. With attention to detail and a proactive approach, he manages essential records and processes, supporting staff and students alike. His commitment plays a vital role in maintaining the school’s operational excellence.",
+      description: "Mr. Dhabir Shivsevak Singh is a dedicated professional who ensures the smooth and efficient handling of administrative responsibilities. With attention to detail and a proactive approach, he manages essential records and processes, supporting staff and students alike. His commitment plays a vital role in maintaining the school’s operational excellence.",
       imageUrl: "https://res.cloudinary.com/diowslfww/image/upload/v1730809305/cmvtfu1km558cjgkw7ik.png"
     },
     {

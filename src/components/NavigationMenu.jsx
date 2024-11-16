@@ -86,11 +86,18 @@ export default function NavBar() {
                             priority
                         />
                     </div>
-                    <div className="flex flex-col text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                        <h1 className="text-3xl font-bold opacity-80">Gyanodaya</h1>
-                        <h2 className="text-3xl font-bold opacity-80">Vidya Mandir</h2>
-                        <h3 className="text-3xl font-bold opacity-80">High School</h3>
-                    </div>
+                <div className="flex flex-col text-white">
+            <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold">
+                GYANODAYA VIDYALAYA TRUST (Registered vide E4753)
+            </h1>
+            <h2 className="text-sm sm:text-base md:text-lg lg:text-xl">
+                Conducted
+            </h2>
+            <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
+                GYANODAYA VIDYA MANDIR HIGH SCHOOL
+            </h3>
+        </div>
+
                 </Link>
 
                 {/* Desktop Navigation Links */}
