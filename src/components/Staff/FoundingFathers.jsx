@@ -26,8 +26,8 @@ const FoundingFathersSection = forwardRef((props,ref) => {
   ];
 
   const foundationPrincipalsNames = [
-    "The Late Mr. Ram Sevak Singh ",
-    "The Late  Mrs. Gulaabi Ramsevak Singh "
+    "The Late Shri. Ramsevak Singh (Babu ji) ",
+    "The Late Smt. Gulabi Ramsevak Singh"
   ];
 
   const containerVariants = {
@@ -76,7 +76,8 @@ const FoundingFathersSection = forwardRef((props,ref) => {
       >
         <motion.div variants={headerVariants}>
           <h2 className="text-4xl font-bold text-[#1a237e] mb-8">
-            Meet Our Founding Fathers
+          GYANODAYA VIDYALAYA TRUST ( Registered vide E4753)
+        Conducted GYANODAYA VIDYA MANDIR HIGH SCHOOL
           </h2>
         </motion.div>
 
@@ -106,7 +107,7 @@ const FoundingFathersSection = forwardRef((props,ref) => {
                 <span>{foundationPrincipalsNames[index]}</span>
                 <br />
                 {/* Static "Foundation Principal" on the second line */}
-                <span>Foundation Principal</span>
+                <span>Founderer</span>
               </h3>
             </motion.div>
           ))}

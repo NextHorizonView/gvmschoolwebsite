@@ -47,9 +47,9 @@ const FirstPrincipalSection = forwardRef((props, ref) => {
               Principal
             </h2>
             <p className="text-gray-700 leading-relaxed text-lg">
-            Mr. Radheshyam Singh Sir, the first Principal of GVM High School, played a crucial role in building our school from the ground up. His dedication, simplicity, and genuine love for education created the guiding path we still follow today. From the start, his vision shaped GVM into a place where students and staff feel supported and inspired, and his values continue to be the heart of our school’s growth and success. 
+            Shri. Radheshyam Ujagir Singh Sir, the first Principal of GVM High School, played a crucial role in building our school from the ground up. His dedication, simplicity, and genuine love for education created the guiding path we still follow today. From the start, his vision shaped GVM into a place where students and staff feel supported and inspired, and his values continue to be the heart of our school’s growth and success. 
             </p>
-          </div>
+          </div>                                
 
           {/* Image Section */}
           <motion.div 
