@@ -87,17 +87,16 @@ export default function NavBar() {
                         />
                     </div>
                 <div className="flex flex-col text-white">
-            <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold">
+            <h1 className="text-base sm:text-lg md:text-xl lg:text-xl">
                 GYANODAYA VIDYALAYA TRUST (Registered vide E4753)
             </h1>
             <h2 className="text-sm sm:text-base md:text-lg lg:text-xl">
                 Conducted
             </h2>
-            <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">
+            <h3 className="text-sm sm:text-base md:text-lg lg:text-2xl font-bold">
                 GYANODAYA VIDYA MANDIR HIGH SCHOOL
             </h3>
         </div>
-
                 </Link>
 
                 {/* Desktop Navigation Links */}

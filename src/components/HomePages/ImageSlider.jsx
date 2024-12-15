@@ -72,7 +72,7 @@ const ImageSlider = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      <div className="absolute inset-0 bg-black/20 z-10"></div>
 
       {/* Centered Text */}
       <div className="absolute inset-0 z-20 flex items-center justify-center">
